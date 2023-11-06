@@ -34,7 +34,8 @@ struct TitleScreenView: View {
                 .buttonStyle(MaterialButtonStyle())
                 Spacer()
                 .sheet(isPresented: $showingInstructions) {
-                    Text("")
+                    Text("Swipe left and right to bounce from platform to platform.\n\nIf the ball falls, exit and reopen the game to start again.\n\nIf the game opens and there are no platforms, reopen the game.")
+                        .padding()
                 }
             }
             if showingGame {
