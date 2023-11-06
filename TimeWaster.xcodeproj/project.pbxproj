@@ -140,9 +140,9 @@
 			children = (
 				3364C9F82AF82A9500D8B766 /* ContentView.swift */,
 				3364CA042AF82B1100D8B766 /* GifView.swift */,
+				3364CA1C2AF859FF00D8B766 /* TitleScreenView.swift */,
 				3364CA1A2AF8548300D8B766 /* JumpGameView.swift */,
 				3364CA1F2AF86B0700D8B766 /* GameOverView.swift */,
-				3364CA1C2AF859FF00D8B766 /* TitleScreenView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

@@ -16,7 +16,8 @@ fileprivate let FIELD_SIZE: Int = 5
 fileprivate let CELL_SIZE: CGFloat = 5
 fileprivate let CAMERA_HEIGHT: Float = 30
 
-class JumpGame: ObservableObject {
+@MainActor class JumpGame: ObservableObject {
+    @Published var gameOver: Bool = false
     var scene: SCNScene = SCNScene()
     var player: AVAudioPlayer?
     let contactDelegate = ContactDelegate()
@@ -56,6 +57,10 @@ class JumpGame: ObservableObject {
             let newField = addField(above: currentField)
             fill(field: newField)
             currentField = newField
+        }
+        if ballPosition.y < 0 {
+            //print(gameOver)
+            gameOver = true
         }
     }
     func onControlChange(newValue: Double) {

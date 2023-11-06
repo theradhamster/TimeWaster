@@ -17,16 +17,18 @@ class ViewModel: ObservableObject {
     ]
     
     func playSound() {
-        guard let path = Bundle.main.path(forResource: current, ofType: "mp3") else {
-            return }
-        let url = URL(fileURLWithPath: path)
-
-        do {
-            player = try AVAudioPlayer(contentsOf: url)
-            player?.play()
+        Task {
+            guard let path = Bundle.main.path(forResource: current, ofType: "mp3") else {
+                return }
+            let url = URL(fileURLWithPath: path)
             
-        } catch let error {
-            print(error.localizedDescription)
+            do {
+                player = try AVAudioPlayer(contentsOf: url)
+                player?.play()
+                
+            } catch let error {
+                print(error.localizedDescription)
+            }
         }
     }
 }

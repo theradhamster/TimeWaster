@@ -50,6 +50,9 @@ struct JumpGameView: View {
                 Spacer()
             }
                 .padding()
+            if game.gameOver {
+                GameOverView(game: JumpGame())
+            }
         }
         .onDisappear(perform: {
             sceneRendererDelegate.onEachFrame = nil

@@ -11,18 +11,24 @@ struct GameOverView: View {
     @ObservedObject var game: JumpGame
     
     var body: some View {
-        VStack {
-            Button("Game Over!") {
+            VStack {
+                Button("Game Over!") {
+                }
+                .buttonStyle(MaterialButtonStyle())
+                .disabled(true)
+                Button("Score: \(game.score)") {
+                }
+                .buttonStyle(MaterialButtonStyle())
+                .disabled(true)
+//                Button {
+//                } label: {
+//                    Text("Play Again")
+//                        .foregroundStyle(.blue)
+//                }
+//                .buttonStyle(MaterialButtonStyle())
             }
-            .buttonStyle(MaterialButtonStyle())
-            .disabled(true)
-            Button("Score: \(game.score)") {
-            }
-            .buttonStyle(MaterialButtonStyle())
-            .disabled(true)
         }
     }
-}
 
 #Preview {
     GameOverView(game: JumpGame())
