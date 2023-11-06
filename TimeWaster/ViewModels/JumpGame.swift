@@ -21,7 +21,7 @@ class JumpGame: ObservableObject {
     var player: AVAudioPlayer?
     let contactDelegate = ContactDelegate()
     @Published var score: Int = 0
-    var ballNode = bigBallNode(UIImage(named: "walterwhite")!)
+    var ballNode = bigBallNode(UIImage(named: "markiplier")!)
     var currentField: Field
     var platforms: [SCNNode] = []
     private let cameraNode: SCNNode = SCNNode()
@@ -133,7 +133,7 @@ private extension JumpGame {
     }
     func fill(field: Field) {
         (field.size * field.size / 4).times {
-            let newPlatform = regularCubeNode(UIImage(named: "markiplier")!)
+            let newPlatform = regularCubeNode(UIImage(named: "areyoustupid")!)
             newPlatform.physicsBody = SCNPhysicsBody(type: .static, shape: nil)
             newPlatform.physicsBody?.categoryBitMask = EntityType.platform.rawValue
             newPlatform.physicsBody?.contactTestBitMask = EntityType.platform.rawValue

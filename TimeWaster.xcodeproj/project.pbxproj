@@ -25,6 +25,13 @@
 		3364CA232AF8849C00D8B766 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 3364CA222AF8849C00D8B766 /* SDWebImageSwiftUI */; };
 		3364CA2B2AF88E2F00D8B766 /* fartextreme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3364CA2A2AF88E2F00D8B766 /* fartextreme.mp3 */; };
 		3364CA2D2AF88ECB00D8B766 /* saulgoodman.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3364CA2C2AF88ECB00D8B766 /* saulgoodman.gif */; };
+		33FB28632AF91FB2002D625D /* thinkingemoji.gif in Resources */ = {isa = PBXBuildFile; fileRef = 33FB28622AF91FB2002D625D /* thinkingemoji.gif */; };
+		33FB28652AF91FB9002D625D /* gorillaspeen.gif in Resources */ = {isa = PBXBuildFile; fileRef = 33FB28642AF91FB9002D625D /* gorillaspeen.gif */; };
+		33FB28672AF928F2002D625D /* creepyeye.gif in Resources */ = {isa = PBXBuildFile; fileRef = 33FB28662AF928F2002D625D /* creepyeye.gif */; };
+		33FB28692AF93173002D625D /* chipmunklaugh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 33FB28682AF93173002D625D /* chipmunklaugh.mp3 */; };
+		33FB286B2AF9375B002D625D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FB286A2AF9375B002D625D /* ViewModel.swift */; };
+		33FB286D2AF93C3A002D625D /* balloonboy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 33FB286C2AF93C3A002D625D /* balloonboy.mp3 */; };
+		33FB286F2AF93D40002D625D /* fart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 33FB286E2AF93D3F002D625D /* fart.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +53,13 @@
 		3364CA1F2AF86B0700D8B766 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 		3364CA2A2AF88E2F00D8B766 /* fartextreme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fartextreme.mp3; sourceTree = "<group>"; };
 		3364CA2C2AF88ECB00D8B766 /* saulgoodman.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = saulgoodman.gif; sourceTree = "<group>"; };
+		33FB28622AF91FB2002D625D /* thinkingemoji.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = thinkingemoji.gif; sourceTree = "<group>"; };
+		33FB28642AF91FB9002D625D /* gorillaspeen.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gorillaspeen.gif; sourceTree = "<group>"; };
+		33FB28662AF928F2002D625D /* creepyeye.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = creepyeye.gif; sourceTree = "<group>"; };
+		33FB28682AF93173002D625D /* chipmunklaugh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chipmunklaugh.mp3; sourceTree = "<group>"; };
+		33FB286A2AF9375B002D625D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		33FB286C2AF93C3A002D625D /* balloonboy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = balloonboy.mp3; sourceTree = "<group>"; };
+		33FB286E2AF93D3F002D625D /* fart.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fart.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,20 +94,11 @@
 			isa = PBXGroup;
 			children = (
 				3364C9F62AF82A9500D8B766 /* TimeWasterApp.swift */,
-				3364C9F82AF82A9500D8B766 /* ContentView.swift */,
-				3364CA042AF82B1100D8B766 /* GifView.swift */,
-				3364CA062AF8398E00D8B766 /* JumpGame.swift */,
-				3364CA1A2AF8548300D8B766 /* JumpGameView.swift */,
-				3364CA1F2AF86B0700D8B766 /* GameOverView.swift */,
-				3364CA1C2AF859FF00D8B766 /* TitleScreenView.swift */,
-				3364CA0A2AF83B2A00D8B766 /* Entity.swift */,
-				3364CA0C2AF83B3000D8B766 /* MaterialNode.swift */,
-				3364CA142AF8498700D8B766 /* Field.swift */,
-				3364CA162AF849C900D8B766 /* Extras.swift */,
-				3364CA182AF84A8100D8B766 /* Themes.swift */,
-				3364CA082AF83A7000D8B766 /* ContactDelegate.swift */,
-				3364CA2C2AF88ECB00D8B766 /* saulgoodman.gif */,
-				3364CA2A2AF88E2F00D8B766 /* fartextreme.mp3 */,
+				33FB28722AF93E38002D625D /* Views */,
+				33FB28732AF93E41002D625D /* ViewModels */,
+				33FB28742AF93E53002D625D /* Models */,
+				33FB28712AF93E0C002D625D /* video-gifs */,
+				33FB28702AF93E00002D625D /* audio */,
 				3364C9FA2AF82A9600D8B766 /* Assets.xcassets */,
 				3364C9FC2AF82A9600D8B766 /* Preview Content */,
 			);
@@ -106,6 +111,62 @@
 				3364C9FD2AF82A9600D8B766 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		33FB28702AF93E00002D625D /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				33FB286C2AF93C3A002D625D /* balloonboy.mp3 */,
+				33FB286E2AF93D3F002D625D /* fart.mp3 */,
+				3364CA2A2AF88E2F00D8B766 /* fartextreme.mp3 */,
+				33FB28682AF93173002D625D /* chipmunklaugh.mp3 */,
+			);
+			path = audio;
+			sourceTree = "<group>";
+		};
+		33FB28712AF93E0C002D625D /* video-gifs */ = {
+			isa = PBXGroup;
+			children = (
+				33FB28662AF928F2002D625D /* creepyeye.gif */,
+				33FB28642AF91FB9002D625D /* gorillaspeen.gif */,
+				33FB28622AF91FB2002D625D /* thinkingemoji.gif */,
+				3364CA2C2AF88ECB00D8B766 /* saulgoodman.gif */,
+			);
+			path = "video-gifs";
+			sourceTree = "<group>";
+		};
+		33FB28722AF93E38002D625D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3364C9F82AF82A9500D8B766 /* ContentView.swift */,
+				3364CA042AF82B1100D8B766 /* GifView.swift */,
+				3364CA1A2AF8548300D8B766 /* JumpGameView.swift */,
+				3364CA1F2AF86B0700D8B766 /* GameOverView.swift */,
+				3364CA1C2AF859FF00D8B766 /* TitleScreenView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		33FB28732AF93E41002D625D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				33FB286A2AF9375B002D625D /* ViewModel.swift */,
+				3364CA062AF8398E00D8B766 /* JumpGame.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		33FB28742AF93E53002D625D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3364CA0A2AF83B2A00D8B766 /* Entity.swift */,
+				3364CA0C2AF83B3000D8B766 /* MaterialNode.swift */,
+				3364CA142AF8498700D8B766 /* Field.swift */,
+				3364CA162AF849C900D8B766 /* Extras.swift */,
+				3364CA182AF84A8100D8B766 /* Themes.swift */,
+				3364CA082AF83A7000D8B766 /* ContactDelegate.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,9 +234,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3364C9FE2AF82A9600D8B766 /* Preview Assets.xcassets in Resources */,
+				33FB286F2AF93D40002D625D /* fart.mp3 in Resources */,
+				33FB28632AF91FB2002D625D /* thinkingemoji.gif in Resources */,
 				3364CA2D2AF88ECB00D8B766 /* saulgoodman.gif in Resources */,
+				33FB28672AF928F2002D625D /* creepyeye.gif in Resources */,
 				3364C9FB2AF82A9600D8B766 /* Assets.xcassets in Resources */,
+				33FB286D2AF93C3A002D625D /* balloonboy.mp3 in Resources */,
 				3364CA2B2AF88E2F00D8B766 /* fartextreme.mp3 in Resources */,
+				33FB28652AF91FB9002D625D /* gorillaspeen.gif in Resources */,
+				33FB28692AF93173002D625D /* chipmunklaugh.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +259,7 @@
 				3364CA1B2AF8548300D8B766 /* JumpGameView.swift in Sources */,
 				3364CA0D2AF83B3000D8B766 /* MaterialNode.swift in Sources */,
 				3364CA0B2AF83B2A00D8B766 /* Entity.swift in Sources */,
+				33FB286B2AF9375B002D625D /* ViewModel.swift in Sources */,
 				3364CA192AF84A8100D8B766 /* Themes.swift in Sources */,
 				3364CA152AF8498700D8B766 /* Field.swift in Sources */,
 				3364CA172AF849C900D8B766 /* Extras.swift in Sources */,
