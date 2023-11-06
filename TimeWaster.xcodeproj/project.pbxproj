@@ -25,6 +25,10 @@
 		3364CA232AF8849C00D8B766 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 3364CA222AF8849C00D8B766 /* SDWebImageSwiftUI */; };
 		3364CA2B2AF88E2F00D8B766 /* fartextreme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3364CA2A2AF88E2F00D8B766 /* fartextreme.mp3 */; };
 		3364CA2D2AF88ECB00D8B766 /* saulgoodman.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3364CA2C2AF88ECB00D8B766 /* saulgoodman.gif */; };
+		33A125A92AFA922B0037C533 /* speen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 33A125A82AFA922B0037C533 /* speen.mp3 */; };
+		33A125AB2AFA942D0037C533 /* careatsshoe.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 33A125AA2AFA942D0037C533 /* careatsshoe.mp4 */; };
+		33A125AF2AFA949E0037C533 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A125AE2AFA949E0037C533 /* Player.swift */; };
+		33A125B32AFA97E00037C533 /* riversstare.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 33A125B22AFA97E00037C533 /* riversstare.mp4 */; };
 		33FB28632AF91FB2002D625D /* thinkingemoji.gif in Resources */ = {isa = PBXBuildFile; fileRef = 33FB28622AF91FB2002D625D /* thinkingemoji.gif */; };
 		33FB28652AF91FB9002D625D /* gorillaspeen.gif in Resources */ = {isa = PBXBuildFile; fileRef = 33FB28642AF91FB9002D625D /* gorillaspeen.gif */; };
 		33FB28672AF928F2002D625D /* creepyeye.gif in Resources */ = {isa = PBXBuildFile; fileRef = 33FB28662AF928F2002D625D /* creepyeye.gif */; };
@@ -53,6 +57,10 @@
 		3364CA1F2AF86B0700D8B766 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 		3364CA2A2AF88E2F00D8B766 /* fartextreme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fartextreme.mp3; sourceTree = "<group>"; };
 		3364CA2C2AF88ECB00D8B766 /* saulgoodman.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = saulgoodman.gif; sourceTree = "<group>"; };
+		33A125A82AFA922B0037C533 /* speen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = speen.mp3; sourceTree = "<group>"; };
+		33A125AA2AFA942D0037C533 /* careatsshoe.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = careatsshoe.mp4; sourceTree = "<group>"; };
+		33A125AE2AFA949E0037C533 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		33A125B22AFA97E00037C533 /* riversstare.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = riversstare.mp4; sourceTree = "<group>"; };
 		33FB28622AF91FB2002D625D /* thinkingemoji.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = thinkingemoji.gif; sourceTree = "<group>"; };
 		33FB28642AF91FB9002D625D /* gorillaspeen.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gorillaspeen.gif; sourceTree = "<group>"; };
 		33FB28662AF928F2002D625D /* creepyeye.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = creepyeye.gif; sourceTree = "<group>"; };
@@ -116,6 +124,7 @@
 		33FB28702AF93E00002D625D /* audio */ = {
 			isa = PBXGroup;
 			children = (
+				33A125A82AFA922B0037C533 /* speen.mp3 */,
 				33FB286C2AF93C3A002D625D /* balloonboy.mp3 */,
 				33FB286E2AF93D3F002D625D /* fart.mp3 */,
 				3364CA2A2AF88E2F00D8B766 /* fartextreme.mp3 */,
@@ -127,6 +136,8 @@
 		33FB28712AF93E0C002D625D /* video-gifs */ = {
 			isa = PBXGroup;
 			children = (
+				33A125B22AFA97E00037C533 /* riversstare.mp4 */,
+				33A125AA2AFA942D0037C533 /* careatsshoe.mp4 */,
 				33FB28662AF928F2002D625D /* creepyeye.gif */,
 				33FB28642AF91FB9002D625D /* gorillaspeen.gif */,
 				33FB28622AF91FB2002D625D /* thinkingemoji.gif */,
@@ -151,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				33FB286A2AF9375B002D625D /* ViewModel.swift */,
+				33A125AE2AFA949E0037C533 /* Player.swift */,
 				3364CA062AF8398E00D8B766 /* JumpGame.swift */,
 			);
 			path = ViewModels;
@@ -237,12 +249,15 @@
 				33FB286F2AF93D40002D625D /* fart.mp3 in Resources */,
 				33FB28632AF91FB2002D625D /* thinkingemoji.gif in Resources */,
 				3364CA2D2AF88ECB00D8B766 /* saulgoodman.gif in Resources */,
+				33A125AB2AFA942D0037C533 /* careatsshoe.mp4 in Resources */,
 				33FB28672AF928F2002D625D /* creepyeye.gif in Resources */,
 				3364C9FB2AF82A9600D8B766 /* Assets.xcassets in Resources */,
+				33A125A92AFA922B0037C533 /* speen.mp3 in Resources */,
 				33FB286D2AF93C3A002D625D /* balloonboy.mp3 in Resources */,
 				3364CA2B2AF88E2F00D8B766 /* fartextreme.mp3 in Resources */,
 				33FB28652AF91FB9002D625D /* gorillaspeen.gif in Resources */,
 				33FB28692AF93173002D625D /* chipmunklaugh.mp3 in Resources */,
+				33A125B32AFA97E00037C533 /* riversstare.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +281,7 @@
 				3364CA052AF82B1100D8B766 /* GifView.swift in Sources */,
 				3364CA092AF83A7000D8B766 /* ContactDelegate.swift in Sources */,
 				3364CA202AF86B0700D8B766 /* GameOverView.swift in Sources */,
+				33A125AF2AFA949E0037C533 /* Player.swift in Sources */,
 				3364C9F72AF82A9500D8B766 /* TimeWasterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,8 +421,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -416,7 +433,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -433,8 +450,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -444,7 +462,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

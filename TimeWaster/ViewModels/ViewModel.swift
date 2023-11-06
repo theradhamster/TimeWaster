@@ -13,7 +13,12 @@ class ViewModel: ObservableObject {
     var soundFiles = [
         "chipmunklaugh",
         "balloonboy",
-        "fart"
+        "fart",
+        "speen"
+    ]
+    var videoFiles = [
+        "careatsshoe",
+        "riversstare"
     ]
     
     func playSound() {

@@ -70,6 +70,13 @@ fileprivate let CAMERA_HEIGHT: Float = 30
     func onControlEnd() {
         lastOffset = 0
     }
+    func doNewGame() {
+        prepareCamera()
+        preparePlayers()
+        score = 0
+        gameOver = false
+        onEachFrame()
+    }
 }
 private extension JumpGame {
     func prepareCamera() {
