@@ -14,6 +14,17 @@ struct GifView: View {
     var body: some View {
         ZStack {
             AnimatedImage(name: "saulgoodman.gif", isAnimating: $isAnimating)
+            VStack {
+                AnimatedImage(name: "gorillaspeen.gif", isAnimating: $isAnimating)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 130)
+                Spacer()
+                AnimatedImage(name: "thinkingemoji.gif", isAnimating: $isAnimating)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 80)
+            }
         }
     }
 }
