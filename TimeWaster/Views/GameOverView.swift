@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GameOverView: View {
     @ObservedObject var game: JumpGame
+    @Binding var showing: Bool
     
     var body: some View {
             VStack {
@@ -20,16 +21,24 @@ struct GameOverView: View {
                 }
                 .buttonStyle(MaterialButtonStyle())
                 .disabled(true)
-//                Button {
-//                } label: {
-//                    Text("Play Again")
-//                        .foregroundStyle(.blue)
+                Spacer()
+                    .frame(height: 70)
+//                Button("Play Again?") {
 //                }
 //                .buttonStyle(MaterialButtonStyle())
+//                .padding(.bottom)
+//                HStack {
+//                    Button("Yes") {
+//                        //game.doNewGame()
+//                    }
+//                    Button("No") {
+//                        showing = false
+//                    }
+//                }
             }
         }
     }
 
 #Preview {
-    GameOverView(game: JumpGame())
+    GameOverView(game: JumpGame(), showing: TitleScreenView().$showingGame)
 }

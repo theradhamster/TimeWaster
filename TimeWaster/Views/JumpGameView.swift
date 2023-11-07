@@ -51,7 +51,7 @@ struct JumpGameView: View {
             }
                 .padding()
             if game.gameOver {
-                GameOverView(game: JumpGame())
+                GameOverView(game: game, showing: TitleScreenView().$showingGame)
             }
         }
         .onDisappear(perform: {

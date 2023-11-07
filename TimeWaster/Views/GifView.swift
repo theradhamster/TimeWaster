@@ -8,6 +8,7 @@
 import SwiftUI
 import SDWebImageSwiftUI
 import AVFoundation
+import AVKit
 
 struct GifView: View {
     @ObservedObject var viewModel: ViewModel
@@ -15,6 +16,7 @@ struct GifView: View {
     @State private var animationAmount = 0.0
     @State private var location = CGPoint.zero
     @State private var isShowingEye = false
+    @State private var showVideo = false
     func showEye() {
         self.isShowingEye = true
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.06) {
@@ -40,10 +42,16 @@ struct GifView: View {
                 }
                 VStack {
                     HStack {
-                        AnimatedImage(name: "gorillaspeen.gif", isAnimating: $isAnimating)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 130)
+                        Button {
+                            viewModel.current = viewModel.soundFiles[3]
+                            viewModel.playSound()
+                        } label: {
+                            AnimatedImage(name: "gorillaspeen.gif", isAnimating: $isAnimating)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 130)
+                                .rotation3DEffect(.degrees(animationAmount), axis: (x: 0.0, y: 1.0, z: 0.0))
+                        }
                         Spacer()
                         Button {
                             viewModel.current = viewModel.soundFiles[1]
@@ -73,7 +81,26 @@ struct GifView: View {
                                     }
                             }
                     }
+                    HStack {
+                        PlayerView(resourceName: viewModel.videoFiles[1])
+                            .frame(width: 100, height: 100)
+                            .padding()
+                        Spacer()
+                    }
                     Spacer()
+                    Button {
+                        showVideo.toggle()
+                    } label: {
+                        Image("soyjak")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 200)
+                    }
+                    .popover(isPresented: $showVideo) {
+                        PlayerView(resourceName: viewModel.videoFiles[0])
+                            .frame(width: 200, height: 200)
+                            .presentationCompactAdaptation(.popover)
+                    }
                     Button {
                         viewModel.current = viewModel.soundFiles[0]
                         viewModel.playSound()
