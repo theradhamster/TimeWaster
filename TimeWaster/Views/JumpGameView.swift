@@ -11,7 +11,6 @@ import SceneKit
 struct JumpGameView: View {
     @ObservedObject var game: JumpGame
     @Binding var showing: Bool
-    var sceneRendererDelegate = SceneRendererDelegate()
     
     var body: some View {
         let drag = DragGesture()
@@ -23,7 +22,7 @@ struct JumpGameView: View {
                 game.onControlEnd()
             }
         ZStack {
-            SceneView(scene: game.scene, options: [.temporalAntialiasingEnabled], delegate: sceneRendererDelegate)
+            SceneView(scene: game.scene, options: [.temporalAntialiasingEnabled], delegate: game.sceneRendererDelegate)
                 .gesture(drag)
                 .ignoresSafeArea()
             VStack {
@@ -39,7 +38,6 @@ struct JumpGameView: View {
                     .buttonStyle(MaterialButtonStyle())
                     Spacer()
                     Button {
-                        
                     } label: {
                         Text("Score \(game.score)")
                     }
@@ -51,14 +49,41 @@ struct JumpGameView: View {
             }
                 .padding()
             if game.gameOver {
-                GameOverView(game: game, showing: TitleScreenView().$showingGame)
+                VStack {
+                    Button("Game Over!") {
+                    }
+                    .buttonStyle(MaterialButtonStyle())
+                    .disabled(true)
+                    Button("Score: \(game.score)") {
+                    }
+                    .buttonStyle(MaterialButtonStyle())
+                    .disabled(true)
+                    Spacer()
+                        .frame(height: 70)
+                    Button("Play Again?") {
+                    }
+                    .buttonStyle(MaterialButtonStyle())
+                    .padding(.bottom)
+                    HStack {
+                        Button("Yes") {
+                            game.doNewGame()
+                        }
+                        .buttonStyle(YesButton())
+                        Button("No") {
+                            withAnimation {
+                                showing = false
+                            }
+                        }
+                        .buttonStyle(NoButton())
+                    }
+                }
             }
         }
         .onDisappear(perform: {
-            sceneRendererDelegate.onEachFrame = nil
+            game.sceneRendererDelegate.onEachFrame = nil
         })
         .onAppear(perform: {
-            sceneRendererDelegate.onEachFrame = game.onEachFrame
+            game.sceneRendererDelegate.onEachFrame = game.onEachFrame
         })
     }
 }

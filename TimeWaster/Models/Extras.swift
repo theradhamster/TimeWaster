@@ -148,3 +148,25 @@ struct MaterialButtonStyle: ButtonStyle {
       .hoverEffect(.lift)
   }
 }
+struct YesButton: ButtonStyle {
+  func makeBody(configuration: Configuration) -> some View {
+    configuration.label
+      .foregroundColor(.green)
+      .padding()
+      .background(.ultraThinMaterial)
+      .cornerRadius(25)
+      .scaleEffect(configuration.isPressed ? 0.9 : 1)
+      .hoverEffect(.lift)
+  }
+}
+struct NoButton: ButtonStyle {
+  func makeBody(configuration: Configuration) -> some View {
+    configuration.label
+      .foregroundColor(.red)
+      .padding()
+      .background(.ultraThinMaterial)
+      .cornerRadius(25)
+      .scaleEffect(configuration.isPressed ? 0.9 : 1)
+      .hoverEffect(.lift)
+  }
+}

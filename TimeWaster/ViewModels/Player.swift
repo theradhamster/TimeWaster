@@ -10,22 +10,22 @@ import UIKit
 import AVKit
 
 struct PlayerView: UIViewRepresentable {
-    let resourceName: String
+    var videoFile: MediaManager.VideoFile.RawValue
     func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<PlayerView>) {
     }
     
     func makeUIView(context: Context) -> UIView {
-        return PlayerUIView(resourceName: resourceName)
+        return PlayerUIView(videoFile: MediaManager.VideoFile(rawValue: videoFile) ?? MediaManager.VideoFile.riversstare)
     }
 }
 
 class PlayerUIView: UIView {
     private let playerLayer = AVPlayerLayer()
     
-    init(resourceName: String) {
+    init(videoFile: MediaManager.VideoFile) {
         super.init(frame: .zero)
         
-        if let fileURL = Bundle.main.url(forResource: resourceName, withExtension: "mp4") {
+        if let fileURL = Bundle.main.url(forResource: videoFile.rawValue, withExtension: "mp4") {
             let player = AVPlayer(url: fileURL)
             player.actionAtItemEnd = .none
             player.play()

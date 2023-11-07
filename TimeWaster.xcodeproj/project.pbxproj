@@ -33,7 +33,7 @@
 		33FB28652AF91FB9002D625D /* gorillaspeen.gif in Resources */ = {isa = PBXBuildFile; fileRef = 33FB28642AF91FB9002D625D /* gorillaspeen.gif */; };
 		33FB28672AF928F2002D625D /* creepyeye.gif in Resources */ = {isa = PBXBuildFile; fileRef = 33FB28662AF928F2002D625D /* creepyeye.gif */; };
 		33FB28692AF93173002D625D /* chipmunklaugh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 33FB28682AF93173002D625D /* chipmunklaugh.mp3 */; };
-		33FB286B2AF9375B002D625D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FB286A2AF9375B002D625D /* ViewModel.swift */; };
+		33FB286B2AF9375B002D625D /* MediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FB286A2AF9375B002D625D /* MediaManager.swift */; };
 		33FB286D2AF93C3A002D625D /* balloonboy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 33FB286C2AF93C3A002D625D /* balloonboy.mp3 */; };
 		33FB286F2AF93D40002D625D /* fart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 33FB286E2AF93D3F002D625D /* fart.mp3 */; };
 /* End PBXBuildFile section */
@@ -65,7 +65,7 @@
 		33FB28642AF91FB9002D625D /* gorillaspeen.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gorillaspeen.gif; sourceTree = "<group>"; };
 		33FB28662AF928F2002D625D /* creepyeye.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = creepyeye.gif; sourceTree = "<group>"; };
 		33FB28682AF93173002D625D /* chipmunklaugh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chipmunklaugh.mp3; sourceTree = "<group>"; };
-		33FB286A2AF9375B002D625D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		33FB286A2AF9375B002D625D /* MediaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaManager.swift; sourceTree = "<group>"; };
 		33FB286C2AF93C3A002D625D /* balloonboy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = balloonboy.mp3; sourceTree = "<group>"; };
 		33FB286E2AF93D3F002D625D /* fart.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fart.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,7 +161,7 @@
 		33FB28732AF93E41002D625D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				33FB286A2AF9375B002D625D /* ViewModel.swift */,
+				33FB286A2AF9375B002D625D /* MediaManager.swift */,
 				33A125AE2AFA949E0037C533 /* Player.swift */,
 				3364CA062AF8398E00D8B766 /* JumpGame.swift */,
 			);
@@ -274,7 +274,7 @@
 				3364CA1B2AF8548300D8B766 /* JumpGameView.swift in Sources */,
 				3364CA0D2AF83B3000D8B766 /* MaterialNode.swift in Sources */,
 				3364CA0B2AF83B2A00D8B766 /* Entity.swift in Sources */,
-				33FB286B2AF9375B002D625D /* ViewModel.swift in Sources */,
+				33FB286B2AF9375B002D625D /* MediaManager.swift in Sources */,
 				3364CA192AF84A8100D8B766 /* Themes.swift in Sources */,
 				3364CA152AF8498700D8B766 /* Field.swift in Sources */,
 				3364CA172AF849C900D8B766 /* Extras.swift in Sources */,
@@ -416,6 +416,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TimeWaster/Preview Content\"";
+				DEVELOPMENT_TEAM = 3K3Q885K8Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -429,7 +430,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.TimeWaster;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stvrshaped.BrainRotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -445,6 +446,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TimeWaster/Preview Content\"";
+				DEVELOPMENT_TEAM = 3K3Q885K8Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -458,7 +460,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.TimeWaster;
+				PRODUCT_BUNDLE_IDENTIFIER = com.stvrshaped.BrainRotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
