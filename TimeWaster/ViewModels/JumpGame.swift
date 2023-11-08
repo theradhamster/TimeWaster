@@ -18,6 +18,7 @@ fileprivate let CAMERA_HEIGHT: Float = 30
 
 @MainActor class JumpGame: ObservableObject {
     @Published var gameOver: Bool = false
+    @Published var gameIsShowing = false
     var scene: SCNScene = SCNScene()
     var player: AVAudioPlayer?
     let contactDelegate = ContactDelegate()
@@ -25,8 +26,11 @@ fileprivate let CAMERA_HEIGHT: Float = 30
     var ballNode = bigBallNode(UIImage(named: "markiplier")!)
     var currentField: Field
     var platforms: [SCNNode] = []
+    var sceneRendererDelegate = SceneRendererDelegate()
     private let cameraNode: SCNNode = SCNNode()
     private var lastOffset: Double = 0
+    //@Published var gameIsRunning: Bool
+    
     init() {
         scene.physicsWorld.gravity = SCNVector3(0, -GRAVITY, 0)
         scene.background.contents = UIImage(named: "mrkrabsshocked")
@@ -58,9 +62,10 @@ fileprivate let CAMERA_HEIGHT: Float = 30
             fill(field: newField)
             currentField = newField
         }
-        if ballPosition.y < 0 {
-            //print(gameOver)
-            gameOver = true
+        if ballPosition.y < -10 {
+            Task {
+                gameOver = true
+            }
         }
     }
     func onControlChange(newValue: Double) {
@@ -71,11 +76,22 @@ fileprivate let CAMERA_HEIGHT: Float = 30
         lastOffset = 0
     }
     func doNewGame() {
-        prepareCamera()
-        preparePlayers()
-        score = 0
-        gameOver = false
-        onEachFrame()
+        ballNode = bigBallNode(UIImage(named: "markiplier")!)
+            score = 0
+            scene.physicsWorld.gravity = SCNVector3(0, -GRAVITY, 0)
+            scene.background.contents = UIImage(named: "mrkrabsshocked")
+            currentField = Field(size: FIELD_SIZE, cellSize: CELL_SIZE)
+            currentField.node.eulerAngles = SCNVector3(Double.pi / 2, 0, Double.pi / 2)
+            scene.rootNode.addChildNode(currentField.node)
+            scene.rootNode.addChildNode(ballNode)
+            scene.physicsWorld.contactDelegate = contactDelegate
+            contactDelegate.onBegin = onContactBegin(contact:)
+            prepareCamera()
+            preparePlayers()
+            fill(field: currentField)
+        Task {
+            gameOver = false
+        }
     }
 }
 private extension JumpGame {
@@ -126,6 +142,7 @@ private extension JumpGame {
         let url = URL(fileURLWithPath: path)
 
         do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, options: AVAudioSession.CategoryOptions.mixWithOthers)
             player = try AVAudioPlayer(contentsOf: url)
             player?.play()
             

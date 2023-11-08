@@ -11,7 +11,7 @@ import AVFoundation
 import AVKit
 
 struct GifView: View {
-    @ObservedObject var viewModel: ViewModel
+    @ObservedObject var mediaManager: MediaManager
     @State var isAnimating = true
     @State private var animationAmount = 0.0
     @State private var location = CGPoint.zero
@@ -19,7 +19,7 @@ struct GifView: View {
     @State private var showVideo = false
     func showEye() {
         self.isShowingEye = true
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.06) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.isShowingEye = false
         }
     }
@@ -43,8 +43,7 @@ struct GifView: View {
                 VStack {
                     HStack {
                         Button {
-                            viewModel.current = viewModel.soundFiles[3]
-                            viewModel.playSound()
+                            mediaManager.playSound(for: .speen)
                         } label: {
                             AnimatedImage(name: "gorillaspeen.gif", isAnimating: $isAnimating)
                                 .resizable()
@@ -54,8 +53,7 @@ struct GifView: View {
                         }
                         Spacer()
                         Button {
-                            viewModel.current = viewModel.soundFiles[1]
-                            viewModel.playSound()
+                            mediaManager.playSound(for: .balloonboy)
                         } label: {
                             AnimatedImage(name: "creepyeye.gif", isAnimating: $isAnimating)
                                 .resizable()
@@ -65,8 +63,7 @@ struct GifView: View {
                         }
                     }
                     Button {
-                        viewModel.current = viewModel.soundFiles[2]
-                        viewModel.playSound()
+                        mediaManager.playSound(for: .fart)
                     } label: {
                         Image("areyoustupid")
                             .resizable()
@@ -82,7 +79,7 @@ struct GifView: View {
                             }
                     }
                     HStack {
-                        PlayerView(resourceName: viewModel.videoFiles[1])
+                        PlayerView(videoFile: MediaManager.VideoFile.riversstare.rawValue)
                             .frame(width: 100, height: 100)
                             .padding()
                         Spacer()
@@ -97,13 +94,12 @@ struct GifView: View {
                             .frame(width: 200)
                     }
                     .popover(isPresented: $showVideo) {
-                        PlayerView(resourceName: viewModel.videoFiles[0])
+                        PlayerView(videoFile: MediaManager.VideoFile.careatsshoe.rawValue)
                             .frame(width: 200, height: 200)
                             .presentationCompactAdaptation(.popover)
                     }
                     Button {
-                        viewModel.current = viewModel.soundFiles[0]
-                        viewModel.playSound()
+                        mediaManager.playSound(for: .chipmunklaugh)
                     } label: {
                         AnimatedImage(name: "thinkingemoji.gif", isAnimating: $isAnimating)
                             .resizable()
@@ -117,5 +113,5 @@ struct GifView: View {
 }
 
 #Preview {
-    GifView(viewModel: ViewModel())
+    GifView(mediaManager: MediaManager())
 }

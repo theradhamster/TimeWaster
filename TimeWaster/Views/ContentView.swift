@@ -10,13 +10,13 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            GifView(viewModel: ViewModel())
+            GifView(mediaManager: MediaManager())
                 .tabItem {
-                    Label("Fun", systemImage: "house")
+                    Label("Fun", systemImage: "face.smiling.inverse")
                 }
             TitleScreenView()
                 .tabItem {
-                    Label("Bounce Game", systemImage: "house")
+                    Label("Bounce Game", systemImage: "brain.head.profile")
                 }
         }
     }
