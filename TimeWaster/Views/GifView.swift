@@ -83,6 +83,12 @@ struct GifView: View {
                             .frame(width: 100, height: 100)
                             .padding()
                         Spacer()
+                        Button {
+                        } label: {
+                            Image("sabit1")
+                                .resizable()
+                                .frame(width: 100, height: 150)
+                        }
                     }
                     Spacer()
                     Button {

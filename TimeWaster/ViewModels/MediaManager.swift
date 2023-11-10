@@ -6,10 +6,11 @@
 //
 
 import AVFoundation
+import SwiftUI
 
 class MediaManager: ObservableObject {
     enum SoundFile: String {
-        case chipmunklaugh, balloonboy, fart, speen
+        case chipmunklaugh, balloonboy, fart, speen, uhohstinky
     }
     enum VideoFile: String {
         case careatsshoe, riversstare

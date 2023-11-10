@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		330516032AFD315900B8F2F8 /* uhohstinky.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 330516022AFD315900B8F2F8 /* uhohstinky.mp3 */; };
 		3364C9F72AF82A9500D8B766 /* TimeWasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3364C9F62AF82A9500D8B766 /* TimeWasterApp.swift */; };
 		3364C9F92AF82A9500D8B766 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3364C9F82AF82A9500D8B766 /* ContentView.swift */; };
 		3364C9FB2AF82A9600D8B766 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3364C9FA2AF82A9600D8B766 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		330516022AFD315900B8F2F8 /* uhohstinky.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = uhohstinky.mp3; sourceTree = "<group>"; };
 		3364C9F32AF82A9500D8B766 /* TimeWaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeWaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3364C9F62AF82A9500D8B766 /* TimeWasterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeWasterApp.swift; sourceTree = "<group>"; };
 		3364C9F82AF82A9500D8B766 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				33FB286E2AF93D3F002D625D /* fart.mp3 */,
 				3364CA2A2AF88E2F00D8B766 /* fartextreme.mp3 */,
 				33FB28682AF93173002D625D /* chipmunklaugh.mp3 */,
+				330516022AFD315900B8F2F8 /* uhohstinky.mp3 */,
 			);
 			path = audio;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				3364CA2D2AF88ECB00D8B766 /* saulgoodman.gif in Resources */,
 				33A125AB2AFA942D0037C533 /* careatsshoe.mp4 in Resources */,
 				33FB28672AF928F2002D625D /* creepyeye.gif in Resources */,
+				330516032AFD315900B8F2F8 /* uhohstinky.mp3 in Resources */,
 				3364C9FB2AF82A9600D8B766 /* Assets.xcassets in Resources */,
 				33A125A92AFA922B0037C533 /* speen.mp3 in Resources */,
 				33FB286D2AF93C3A002D625D /* balloonboy.mp3 in Resources */,
