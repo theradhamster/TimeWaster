@@ -10,6 +10,7 @@ import SwiftUI
 struct TestView: View {
     @State private var username = ""
     @State private var text = ""
+    @State private var posts = [Post]()
     
     var body: some View {
         VStack {
@@ -20,9 +21,26 @@ struct TestView: View {
                 Task {
                     do {
                         try await CloudKitService.save(newPost)
+                        posts.append(newPost)
                     } catch {
                         print(error.localizedDescription)
                     }
+                }
+            }
+            List(posts) { post in
+                VStack {
+                    Text(post.username)
+                    Text(post.text)
+                }
+            }
+        }
+        .onAppear {
+            Task {
+                do {
+                    let posts = try await CloudKitService.fetch()
+                    self.posts = posts
+                } catch {
+                    print(error.localizedDescription)
                 }
             }
         }

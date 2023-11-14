@@ -8,7 +8,7 @@
 import Foundation
 import CloudKit
 
-struct Post {
+struct Post: Identifiable {
     static let recordType = "Post"
     
     var id: String
