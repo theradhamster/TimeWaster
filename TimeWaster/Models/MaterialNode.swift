@@ -23,7 +23,6 @@ class MaterialNode: SCNNode {
         fatalError("init(coder:) has not been implemented")
     }
 }
-
 let bigBallNode = { (image: UIImage) -> MaterialNode in
     let sphereGeometry = SCNSphere(radius: 1)
     sphereGeometry.segmentCount = 10

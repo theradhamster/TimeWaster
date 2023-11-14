@@ -6,13 +6,14 @@
 //
 
 import AVFoundation
+import SwiftUI
 
 class MediaManager: ObservableObject {
     enum SoundFile: String {
-        case chipmunklaugh, balloonboy, fart, speen
+        case chipmunklaugh, balloonboy, fart, speen, uhohstinky, jesse, whatthedogdoin, buddyhollylick, californiakids, theworldhasturned, onlyindreams, fallingforyou, takecontrol, slave, perfectsituation, smile
     }
     enum VideoFile: String {
-        case careatsshoe, riversstare
+        case careatsshoe, riversstare, weezeraolsessions
     }
     var player: AVAudioPlayer?
     
@@ -31,5 +32,11 @@ class MediaManager: ObservableObject {
                 print(error.localizedDescription)
             }
         }
+    }
+    func pauseSound() {
+        player!.pause()
+    }
+    func resumeSound() {
+        player!.play()
     }
 }

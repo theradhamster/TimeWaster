@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SceneKit
+import PhotosUI
 
 struct JumpGameView: View {
     @ObservedObject var game: JumpGame
@@ -89,5 +90,5 @@ struct JumpGameView: View {
 }
 
 #Preview {
-    JumpGameView(game: JumpGame(), showing: TitleScreenView().$showingGame)
+    JumpGameView(game: JumpGame(), showing: TitleScreenView(mediaManager: MediaManager()).$showingGame)
 }

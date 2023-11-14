@@ -23,17 +23,16 @@ fileprivate let CAMERA_HEIGHT: Float = 30
     var player: AVAudioPlayer?
     let contactDelegate = ContactDelegate()
     @Published var score: Int = 0
-    var ballNode = bigBallNode(UIImage(named: "markiplier")!)
+    var ballNode = bigBallNode(UIImage(named: "walterwhite")!)
     var currentField: Field
     var platforms: [SCNNode] = []
     var sceneRendererDelegate = SceneRendererDelegate()
     private let cameraNode: SCNNode = SCNNode()
     private var lastOffset: Double = 0
-    //@Published var gameIsRunning: Bool
     
     init() {
         scene.physicsWorld.gravity = SCNVector3(0, -GRAVITY, 0)
-        scene.background.contents = UIImage(named: "mrkrabsshocked")
+        scene.background.contents = UIImage(named: "email")
         currentField = Field(size: FIELD_SIZE, cellSize: CELL_SIZE)
         currentField.node.eulerAngles = SCNVector3(Double.pi / 2, 0, Double.pi / 2)
         scene.rootNode.addChildNode(currentField.node)
@@ -76,10 +75,10 @@ fileprivate let CAMERA_HEIGHT: Float = 30
         lastOffset = 0
     }
     func doNewGame() {
-        ballNode = bigBallNode(UIImage(named: "markiplier")!)
+        ballNode = bigBallNode(UIImage(named: "walterwhite")!)
             score = 0
             scene.physicsWorld.gravity = SCNVector3(0, -GRAVITY, 0)
-            scene.background.contents = UIImage(named: "mrkrabsshocked")
+            scene.background.contents = UIImage(named: "email")
             currentField = Field(size: FIELD_SIZE, cellSize: CELL_SIZE)
             currentField.node.eulerAngles = SCNVector3(Double.pi / 2, 0, Double.pi / 2)
             scene.rootNode.addChildNode(currentField.node)
@@ -137,17 +136,19 @@ private extension JumpGame {
         }
     }
     func playSound() {
-        guard let path = Bundle.main.path(forResource: "fartextreme", ofType: "mp3") else {
-            return }
-        let url = URL(fileURLWithPath: path)
-
-        do {
-            try AVAudioSession.sharedInstance().setCategory(.playback, options: AVAudioSession.CategoryOptions.mixWithOthers)
-            player = try AVAudioPlayer(contentsOf: url)
-            player?.play()
+        Task {
+            guard let path = Bundle.main.path(forResource: "jesse", ofType: "mp3") else {
+                return }
+            let url = URL(fileURLWithPath: path)
             
-        } catch let error {
-            print(error.localizedDescription)
+            do {
+                try AVAudioSession.sharedInstance().setCategory(.playback, options: AVAudioSession.CategoryOptions.mixWithOthers)
+                player = try AVAudioPlayer(contentsOf: url)
+                player?.play()
+                
+            } catch let error {
+                print(error.localizedDescription)
+            }
         }
     }
 }
