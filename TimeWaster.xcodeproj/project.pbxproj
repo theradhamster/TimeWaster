@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		330516032AFD315900B8F2F8 /* uhohstinky.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 330516022AFD315900B8F2F8 /* uhohstinky.mp3 */; };
+		335ED2972B03CB42007D1FE6 /* CKViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335ED2962B03CB42007D1FE6 /* CKViewModel.swift */; };
 		335ED2952B03C3E4007D1FE6 /* video-gifs in Resources */ = {isa = PBXBuildFile; fileRef = 335ED2942B03C3E4007D1FE6 /* video-gifs */; };
 		33646AD42B03A6AC00AA781E /* whatthedogdoin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 33646AD32B03A6AC00AA781E /* whatthedogdoin.mp3 */; };
 		3364C9F72AF82A9500D8B766 /* TimeWasterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3364C9F62AF82A9500D8B766 /* TimeWasterApp.swift */; };
@@ -27,6 +28,10 @@
 		3364CA202AF86B0700D8B766 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3364CA1F2AF86B0700D8B766 /* GameOverView.swift */; };
 		3364CA232AF8849C00D8B766 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 3364CA222AF8849C00D8B766 /* SDWebImageSwiftUI */; };
 		3364CA2B2AF88E2F00D8B766 /* fartextreme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3364CA2A2AF88E2F00D8B766 /* fartextreme.mp3 */; };
+		3364CA2D2AF88ECB00D8B766 /* saulgoodman.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3364CA2C2AF88ECB00D8B766 /* saulgoodman.gif */; };
+		337EEACF2AFE7B2F00513A6F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337EEACE2AFE7B2F00513A6F /* Post.swift */; };
+		337EEAD12AFE7FC500513A6F /* CloudKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337EEAD02AFE7FC500513A6F /* CloudKitService.swift */; };
+		337EEAD42AFE81CA00513A6F /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337EEAD32AFE81CA00513A6F /* TestView.swift */; };
 		33855F002B033CB600F39E64 /* WeezerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33855EFF2B033CB600F39E64 /* WeezerView.swift */; };
 		33855F042B033F6900F39E64 /* buddyhollylick.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 33855F032B033F6900F39E64 /* buddyhollylick.mp3 */; };
 		33855F062B034B1100F39E64 /* californiakids.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 33855F052B034B1100F39E64 /* californiakids.mp3 */; };
@@ -48,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		330516022AFD315900B8F2F8 /* uhohstinky.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = uhohstinky.mp3; sourceTree = "<group>"; };
+		335ED2962B03CB42007D1FE6 /* CKViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKViewModel.swift; sourceTree = "<group>"; };
 		335ED2942B03C3E4007D1FE6 /* video-gifs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "video-gifs"; sourceTree = "<group>"; };
 		33646AD32B03A6AC00AA781E /* whatthedogdoin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whatthedogdoin.mp3; sourceTree = "<group>"; };
 		3364C9F32AF82A9500D8B766 /* TimeWaster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeWaster.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +73,11 @@
 		3364CA1C2AF859FF00D8B766 /* TitleScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreenView.swift; sourceTree = "<group>"; };
 		3364CA1F2AF86B0700D8B766 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
 		3364CA2A2AF88E2F00D8B766 /* fartextreme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = fartextreme.mp3; sourceTree = "<group>"; };
+		3364CA2C2AF88ECB00D8B766 /* saulgoodman.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = saulgoodman.gif; sourceTree = "<group>"; };
+		337EEACE2AFE7B2F00513A6F /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		337EEAD02AFE7FC500513A6F /* CloudKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitService.swift; sourceTree = "<group>"; };
+		337EEAD22AFE808E00513A6F /* TimeWaster.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TimeWaster.entitlements; sourceTree = "<group>"; };
+		337EEAD32AFE81CA00513A6F /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		33855EFF2B033CB600F39E64 /* WeezerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeezerView.swift; sourceTree = "<group>"; };
 		33855F032B033F6900F39E64 /* buddyhollylick.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = buddyhollylick.mp3; sourceTree = "<group>"; };
 		33855F052B034B1100F39E64 /* californiakids.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = californiakids.mp3; sourceTree = "<group>"; };
@@ -117,6 +128,7 @@
 		3364C9F52AF82A9500D8B766 /* TimeWaster */ = {
 			isa = PBXGroup;
 			children = (
+				337EEAD22AFE808E00513A6F /* TimeWaster.entitlements */,
 				3364C9F62AF82A9500D8B766 /* TimeWasterApp.swift */,
 				33FB28722AF93E38002D625D /* Views */,
 				33FB28732AF93E41002D625D /* ViewModels */,
@@ -166,6 +178,7 @@
 			children = (
 				3364C9F82AF82A9500D8B766 /* ContentView.swift */,
 				3364CA042AF82B1100D8B766 /* GifView.swift */,
+				337EEAD32AFE81CA00513A6F /* TestView.swift */,
 				33855EFF2B033CB600F39E64 /* WeezerView.swift */,
 				3364CA1C2AF859FF00D8B766 /* TitleScreenView.swift */,
 				3364CA1A2AF8548300D8B766 /* JumpGameView.swift */,
@@ -178,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				33FB286A2AF9375B002D625D /* MediaManager.swift */,
+				335ED2962B03CB42007D1FE6 /* CKViewModel.swift */,
 				33A125AE2AFA949E0037C533 /* Player.swift */,
 				3364CA062AF8398E00D8B766 /* JumpGame.swift */,
 			);
@@ -188,6 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				3364CA0A2AF83B2A00D8B766 /* Entity.swift */,
+				337EEACE2AFE7B2F00513A6F /* Post.swift */,
+				337EEAD02AFE7FC500513A6F /* CloudKitService.swift */,
 				3364CA0C2AF83B3000D8B766 /* MaterialNode.swift */,
 				3364CA142AF8498700D8B766 /* Field.swift */,
 				3364CA162AF849C900D8B766 /* Extras.swift */,
@@ -291,11 +307,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				337EEAD12AFE7FC500513A6F /* CloudKitService.swift in Sources */,
 				3364C9F92AF82A9500D8B766 /* ContentView.swift in Sources */,
 				3364CA1D2AF859FF00D8B766 /* TitleScreenView.swift in Sources */,
 				3364CA072AF8398E00D8B766 /* JumpGame.swift in Sources */,
 				3364CA1B2AF8548300D8B766 /* JumpGameView.swift in Sources */,
 				3364CA0D2AF83B3000D8B766 /* MaterialNode.swift in Sources */,
+				337EEAD42AFE81CA00513A6F /* TestView.swift in Sources */,
 				3364CA0B2AF83B2A00D8B766 /* Entity.swift in Sources */,
 				33FB286B2AF9375B002D625D /* MediaManager.swift in Sources */,
 				3364CA192AF84A8100D8B766 /* Themes.swift in Sources */,
@@ -303,10 +321,12 @@
 				3364CA152AF8498700D8B766 /* Field.swift in Sources */,
 				3364CA172AF849C900D8B766 /* Extras.swift in Sources */,
 				3364CA052AF82B1100D8B766 /* GifView.swift in Sources */,
+				337EEACF2AFE7B2F00513A6F /* Post.swift in Sources */,
 				3364CA092AF83A7000D8B766 /* ContactDelegate.swift in Sources */,
 				3364CA202AF86B0700D8B766 /* GameOverView.swift in Sources */,
 				33A125AF2AFA949E0037C533 /* Player.swift in Sources */,
 				3364C9F72AF82A9500D8B766 /* TimeWasterApp.swift in Sources */,
+				335ED2972B03CB42007D1FE6 /* CKViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TimeWaster/TimeWaster.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TimeWaster/Preview Content\"";
@@ -467,6 +488,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TimeWaster/TimeWaster.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"TimeWaster/Preview Content\"";
