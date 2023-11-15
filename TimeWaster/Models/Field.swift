@@ -44,7 +44,7 @@ class Field {
         
         // Make the plane visible from both sides
         cellGeometry.firstMaterial?.isDoubleSided = true
-        cellGeometry.firstMaterial?.diffuse.contents = UIImage(named: "areyoustupid")
+        cellGeometry.firstMaterial?.diffuse.contents = UIImage(named: "morrissey")
         cellGeometry.cornerRadius = FieldConstants.defaultCellSize / 40
         
         let cell = MaterialNode(type: .field, id: stringIndex)

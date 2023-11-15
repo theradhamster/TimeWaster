@@ -79,26 +79,37 @@ struct GifView: View {
                                         }
                                 }
                         }
-                        HStack {
-                            NavigationLink {
-                                WeezerView(mediaManager: mediaManager)
-                                    .onAppear {
-                                        mediaManager.playSound(for: .buddyhollylick)
-                                    }
-                            } label: {
-                                AnimatedImage(name: "riversstare.gif", isAnimating: $isAnimating)
-                                    .resizable()
-                                    .scaledToFit()
+                        VStack {
+                            HStack {
+                                NavigationLink {
+                                    WeezerView(mediaManager: mediaManager)
+                                        .onAppear {
+                                            mediaManager.playSound(for: .buddyhollylick)
+                                        }
+                                } label: {
+                                    AnimatedImage(name: "riversstare.gif", isAnimating: $isAnimating)
+                                        .resizable()
+                                        .scaledToFit()
+                                }
+                                .frame(width: 100, height: 100)
+                                .padding()
+                                Spacer()
+                                Button {
+                                    mediaManager.playSound(for: .whatthedogdoin)
+                                } label: {
+                                    Image("sabit1")
+                                        .resizable()
+                                        .frame(width: 100, height: 150)
+                                }
                             }
-                            .frame(width: 100, height: 100)
-                            .padding()
-                            Spacer()
                             Button {
-                                mediaManager.playSound(for: .whatthedogdoin)
+                                
                             } label: {
-                                Image("sabit1")
+                                Image("thom")
                                     .resizable()
-                                    .frame(width: 100, height: 150)
+                                    .scaledToFill()
+                                    .frame(width: 90)
+                                    .clipShape(Heart())
                             }
                         }
                         Spacer()
@@ -127,6 +138,17 @@ struct GifView: View {
                 }
             }
         }
+    }
+}
+struct Heart: Shape {
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        path.move(to: CGPoint(x: rect.midX, y: rect.maxY ))
+        path.addCurve(to: CGPoint(x: rect.minX, y: rect.height/4), control1:CGPoint(x: rect.midX, y: rect.height*3/4), control2: CGPoint(x: rect.minX, y: rect.midY))
+        path.addArc(center: CGPoint( x: rect.width/4,y: rect.height/4), radius: (rect.width/4), startAngle: Angle(radians: Double.pi), endAngle: Angle(radians: 0), clockwise: false)
+        path.addArc(center: CGPoint( x: rect.width * 3/4,y: rect.height/4), radius: (rect.width/4), startAngle: Angle(radians: Double.pi), endAngle: Angle(radians: 0), clockwise: false)
+        path.addCurve(to: CGPoint(x: rect.midX, y: rect.height), control1: CGPoint(x: rect.width, y: rect.midY), control2: CGPoint(x: rect.midX, y: rect.height*3/4))
+        return path
     }
 }
 
