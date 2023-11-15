@@ -18,6 +18,10 @@ struct ContentView: View {
                 .tabItem {
                     Label("Bounce Game", systemImage: "brain.head.profile")
                 }
+            SocialView()
+                .tabItem {
+                    Label("Dorothy Network", systemImage: "figure.walk")
+                }
         }
     }
 }
