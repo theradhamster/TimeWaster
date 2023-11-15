@@ -14,7 +14,6 @@ struct SocialView: View {
     @State private var posts = [Post]()
     @State private var showingPostAlert = false
     @State private var isAnimating = true
-    @State private var animationAmount = 0.0
     
     var body: some View {
         NavigationStack {
@@ -25,6 +24,9 @@ struct SocialView: View {
                     .opacity(0.3)
                 AnimatedImage(name: "roll.gif", isAnimating: $isAnimating)
                     .resizable()
+                    .scaledToFit()
+                    .frame(width: 200)
+                    .opacity(0.6)
                 ScrollView {
                     VStack {
                         ForEach(posts) { post in
@@ -58,7 +60,7 @@ struct SocialView: View {
                             Image("me")
                                 .resizable()
                                 .frame(width: 80, height: 40)
-                                .rotation3DEffect(.degrees(animationAmount), axis: (x: 0.0, y: 0.0, z: 1.0))
+                                //.rotation3DEffect(.degrees(360), axis: (x: 0.0, y: 0.0, z: 1.0))
 
                         }
                     }
@@ -111,10 +113,6 @@ struct SocialView: View {
                     print(error.localizedDescription)
                 }
             }
-            withAnimation(.linear(duration: 0.09)
-                .speed(0.04).repeatForever(autoreverses: false)) {
-                    animationAmount = 360.0
-                }
         }
     }
 }

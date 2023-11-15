@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		330516032AFD315900B8F2F8 /* uhohstinky.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 330516022AFD315900B8F2F8 /* uhohstinky.mp3 */; };
-		335ED2952B03C3E4007D1FE6 /* video-gifs in Resources */ = {isa = PBXBuildFile; fileRef = 335ED2942B03C3E4007D1FE6 /* video-gifs */; };
 		335ED2972B03CB42007D1FE6 /* CKViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335ED2962B03CB42007D1FE6 /* CKViewModel.swift */; };
 		335ED2992B03D9A7007D1FE6 /* SocialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335ED2982B03D9A7007D1FE6 /* SocialView.swift */; };
 		3363430A2B04FF68004472C9 /* PAPYRUS.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 336343092B04FF68004472C9 /* PAPYRUS.TTF */; };
@@ -47,6 +46,14 @@
 		33855F1E2B0355C700F39E64 /* jesse.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 33855F1D2B0355C700F39E64 /* jesse.mp3 */; };
 		33A125A92AFA922B0037C533 /* speen.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 33A125A82AFA922B0037C533 /* speen.mp3 */; };
 		33A125AF2AFA949E0037C533 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A125AE2AFA949E0037C533 /* Player.swift */; };
+		33C0F74C2B051B6E00EF06D0 /* roll.gif in Resources */ = {isa = PBXBuildFile; fileRef = 33C0F74B2B051B6E00EF06D0 /* roll.gif */; };
+		33C0F74E2B051C7C00EF06D0 /* brianchokesontoast.gif in Resources */ = {isa = PBXBuildFile; fileRef = 33C0F74D2B051C7C00EF06D0 /* brianchokesontoast.gif */; };
+		33C0F7502B051C8E00EF06D0 /* weezeraolsessions.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 33C0F74F2B051C8E00EF06D0 /* weezeraolsessions.mp4 */; };
+		33C0F7522B051C9500EF06D0 /* riversstare.gif in Resources */ = {isa = PBXBuildFile; fileRef = 33C0F7512B051C9500EF06D0 /* riversstare.gif */; };
+		33C0F7542B051E0800EF06D0 /* gorillaspeen.gif in Resources */ = {isa = PBXBuildFile; fileRef = 33C0F7532B051E0800EF06D0 /* gorillaspeen.gif */; };
+		33C0F7562B051E0F00EF06D0 /* thinkingemoji.gif in Resources */ = {isa = PBXBuildFile; fileRef = 33C0F7552B051E0F00EF06D0 /* thinkingemoji.gif */; };
+		33C0F7582B051E1500EF06D0 /* saulgoodman.gif in Resources */ = {isa = PBXBuildFile; fileRef = 33C0F7572B051E1500EF06D0 /* saulgoodman.gif */; };
+		33C0F75C2B051E4B00EF06D0 /* creepyeye.gif in Resources */ = {isa = PBXBuildFile; fileRef = 33C0F75B2B051E4B00EF06D0 /* creepyeye.gif */; };
 		33FB28692AF93173002D625D /* chipmunklaugh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 33FB28682AF93173002D625D /* chipmunklaugh.mp3 */; };
 		33FB286B2AF9375B002D625D /* MediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FB286A2AF9375B002D625D /* MediaManager.swift */; };
 		33FB286D2AF93C3A002D625D /* balloonboy.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 33FB286C2AF93C3A002D625D /* balloonboy.mp3 */; };
@@ -55,7 +62,6 @@
 
 /* Begin PBXFileReference section */
 		330516022AFD315900B8F2F8 /* uhohstinky.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = uhohstinky.mp3; sourceTree = "<group>"; };
-		335ED2942B03C3E4007D1FE6 /* video-gifs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "video-gifs"; sourceTree = "<group>"; };
 		335ED2962B03CB42007D1FE6 /* CKViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKViewModel.swift; sourceTree = "<group>"; };
 		335ED2982B03D9A7007D1FE6 /* SocialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialView.swift; sourceTree = "<group>"; };
 		335ED29A2B03DD7E007D1FE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -96,6 +102,17 @@
 		33855F1D2B0355C700F39E64 /* jesse.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jesse.mp3; sourceTree = "<group>"; };
 		33A125A82AFA922B0037C533 /* speen.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = speen.mp3; sourceTree = "<group>"; };
 		33A125AE2AFA949E0037C533 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		33C0F73F2B051ABA00EF06D0 /* babydance.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = babydance.gif; sourceTree = "<group>"; };
+		33C0F7432B051ABA00EF06D0 /* riversdance.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = riversdance.gif; sourceTree = "<group>"; };
+		33C0F7492B051ABC00EF06D0 /* careatsshoe.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = careatsshoe.mp4; sourceTree = "<group>"; };
+		33C0F74B2B051B6E00EF06D0 /* roll.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = roll.gif; sourceTree = "<group>"; };
+		33C0F74D2B051C7C00EF06D0 /* brianchokesontoast.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = brianchokesontoast.gif; sourceTree = "<group>"; };
+		33C0F74F2B051C8E00EF06D0 /* weezeraolsessions.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = weezeraolsessions.mp4; sourceTree = "<group>"; };
+		33C0F7512B051C9500EF06D0 /* riversstare.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = riversstare.gif; sourceTree = "<group>"; };
+		33C0F7532B051E0800EF06D0 /* gorillaspeen.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gorillaspeen.gif; sourceTree = "<group>"; };
+		33C0F7552B051E0F00EF06D0 /* thinkingemoji.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = thinkingemoji.gif; sourceTree = "<group>"; };
+		33C0F7572B051E1500EF06D0 /* saulgoodman.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = saulgoodman.gif; sourceTree = "<group>"; };
+		33C0F75B2B051E4B00EF06D0 /* creepyeye.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = creepyeye.gif; sourceTree = "<group>"; };
 		33FB28682AF93173002D625D /* chipmunklaugh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chipmunklaugh.mp3; sourceTree = "<group>"; };
 		33FB286A2AF9375B002D625D /* MediaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaManager.swift; sourceTree = "<group>"; };
 		33FB286C2AF93C3A002D625D /* balloonboy.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = balloonboy.mp3; sourceTree = "<group>"; };
@@ -139,9 +156,9 @@
 				33FB28722AF93E38002D625D /* Views */,
 				33FB28732AF93E41002D625D /* ViewModels */,
 				33FB28742AF93E53002D625D /* Models */,
-				335ED2942B03C3E4007D1FE6 /* video-gifs */,
 				33FB28702AF93E00002D625D /* audio */,
 				3364C9FA2AF82A9600D8B766 /* Assets.xcassets */,
+				33C0F74A2B051AC200EF06D0 /* euyghvbhdfv */,
 				3363430B2B0507F1004472C9 /* CHILLER.TTF */,
 				336343092B04FF68004472C9 /* PAPYRUS.TTF */,
 				3364C9FC2AF82A9600D8B766 /* Preview Content */,
@@ -155,6 +172,24 @@
 				3364C9FD2AF82A9600D8B766 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		33C0F74A2B051AC200EF06D0 /* euyghvbhdfv */ = {
+			isa = PBXGroup;
+			children = (
+				33C0F74D2B051C7C00EF06D0 /* brianchokesontoast.gif */,
+				33C0F73F2B051ABA00EF06D0 /* babydance.gif */,
+				33C0F7492B051ABC00EF06D0 /* careatsshoe.mp4 */,
+				33C0F7432B051ABA00EF06D0 /* riversdance.gif */,
+				33C0F75B2B051E4B00EF06D0 /* creepyeye.gif */,
+				33C0F7512B051C9500EF06D0 /* riversstare.gif */,
+				33C0F7532B051E0800EF06D0 /* gorillaspeen.gif */,
+				33C0F7572B051E1500EF06D0 /* saulgoodman.gif */,
+				33C0F7552B051E0F00EF06D0 /* thinkingemoji.gif */,
+				33C0F74B2B051B6E00EF06D0 /* roll.gif */,
+				33C0F74F2B051C8E00EF06D0 /* weezeraolsessions.mp4 */,
+			);
+			path = euyghvbhdfv;
 			sourceTree = "<group>";
 		};
 		33FB28702AF93E00002D625D /* audio */ = {
@@ -288,22 +323,29 @@
 			files = (
 				3364C9FE2AF82A9600D8B766 /* Preview Assets.xcassets in Resources */,
 				33855F142B034BBC00F39E64 /* perfectsituation.mp3 in Resources */,
+				33C0F7522B051C9500EF06D0 /* riversstare.gif in Resources */,
 				33FB286F2AF93D40002D625D /* fart.mp3 in Resources */,
-				335ED2952B03C3E4007D1FE6 /* video-gifs in Resources */,
 				33855F1E2B0355C700F39E64 /* jesse.mp3 in Resources */,
 				33855F0C2B034B4600F39E64 /* fallingforyou.mp3 in Resources */,
 				3363430C2B0507F1004472C9 /* CHILLER.TTF in Resources */,
 				3363430A2B04FF68004472C9 /* PAPYRUS.TTF in Resources */,
+				33C0F75C2B051E4B00EF06D0 /* creepyeye.gif in Resources */,
 				33855F062B034B1100F39E64 /* californiakids.mp3 in Resources */,
+				33C0F7542B051E0800EF06D0 /* gorillaspeen.gif in Resources */,
 				33855F0A2B034B2600F39E64 /* onlyindreams.mp3 in Resources */,
 				33855F042B033F6900F39E64 /* buddyhollylick.mp3 in Resources */,
 				33855F082B034B1B00F39E64 /* theworldhasturned.mp3 in Resources */,
+				33C0F74E2B051C7C00EF06D0 /* brianchokesontoast.gif in Resources */,
 				33646AD42B03A6AC00AA781E /* whatthedogdoin.mp3 in Resources */,
 				330516032AFD315900B8F2F8 /* uhohstinky.mp3 in Resources */,
 				3364C9FB2AF82A9600D8B766 /* Assets.xcassets in Resources */,
 				33A125A92AFA922B0037C533 /* speen.mp3 in Resources */,
+				33C0F74C2B051B6E00EF06D0 /* roll.gif in Resources */,
+				33C0F7562B051E0F00EF06D0 /* thinkingemoji.gif in Resources */,
 				33855F122B034BAD00F39E64 /* slave.mp3 in Resources */,
+				33C0F7582B051E1500EF06D0 /* saulgoodman.gif in Resources */,
 				33855F102B034BA000F39E64 /* takecontrol.mp3 in Resources */,
+				33C0F7502B051C8E00EF06D0 /* weezeraolsessions.mp4 in Resources */,
 				33FB286D2AF93C3A002D625D /* balloonboy.mp3 in Resources */,
 				3364CA2B2AF88E2F00D8B766 /* fartextreme.mp3 in Resources */,
 				33855F0E2B034B7800F39E64 /* smile.mp3 in Resources */,
