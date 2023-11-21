@@ -10,7 +10,7 @@ import SwiftUI
 
 class MediaManager: ObservableObject {
     enum SoundFile: String {
-        case chipmunklaugh, balloonboy, fart, speen, uhohstinky, jesse, whatthedogdoin, buddyhollylick, californiakids, theworldhasturned, onlyindreams, fallingforyou, takecontrol, slave, perfectsituation, smile
+        case chipmunklaugh, balloonboy, fart, speen, uhohstinky, jesse, whatthedogdoin, buddyhollylick, californiakids, theworldhasturned, onlyindreams, fallingforyou, takecontrol, slave, perfectsituation, smile, gigachadmusic, fnafambience
     }
     enum VideoFile: String {
         case careatsshoe, riversstare, weezeraolsessions

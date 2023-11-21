@@ -6,6 +6,7 @@
 	<array>
 		<string>PAPYRUS.TTF</string>
 		<string>CHILLER.TTF</string>
+		<string>Minecraft.ttf</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>

@@ -18,7 +18,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Bounce Game", systemImage: "brain.head.profile")
                 }
-            SocialView()
+            SocialView(mediaManager: MediaManager())
                 .tabItem {
                     Label("Dorothy Network", systemImage: "figure.walk")
                 }

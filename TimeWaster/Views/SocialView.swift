@@ -9,11 +9,16 @@ import SwiftUI
 import SDWebImageSwiftUI
 
 struct SocialView: View {
+    @Environment(\.dismiss) var dismiss
+    @ObservedObject var mediaManager: MediaManager
+    @StateObject var viewModel = CKViewModel()
     @State private var username = ""
     @State private var text = ""
-    @State private var posts = [Post]()
-    @State private var showingPostAlert = false
+    @State private var reactions = [Reaction]()
+    @State var showingPostAlert = false
     @State private var isAnimating = true
+    @State private var didFail = false
+    @State private var errorTitle: String = ""
     
     var body: some View {
         NavigationStack {
@@ -28,28 +33,56 @@ struct SocialView: View {
                     .frame(width: 200)
                     .opacity(0.6)
                 ScrollView {
-                    VStack {
-                        ForEach(posts) { post in
+                    LazyVStack {
+                        ForEach(viewModel.posts) { post in
+                            NavigationLink(destination: PostDetailView(viewModel: viewModel, post: post)) {
                                 HStack {
                                     VStack(alignment: .leading) {
                                         HStack {
                                             Text(post.username)
-                                                .font(.custom("CHILLER", size: 20))
+                                                .font(.custom("Minecraft", size: 22))
+                                                .foregroundStyle(.gray)
+                                            Text(post.creationDate.formatted())
+                                                .font(.custom("CHILLER", size: 22))
                                                 .foregroundStyle(.gray)
                                         }
                                         Text(post.text)
                                             .font(.custom("PAPYRUS", size: 28))
+                                            .foregroundStyle(.primary)
+                                            .multilineTextAlignment(.leading)
+                                        if let media = post.media {
+                                            Image(uiImage: media)
+                                                .resizable()
+                                                .scaledToFit()
+                                        }
+                                        ScrollView(.horizontal) {
+                                            HStack {
+                                                ReactionView(viewModel: viewModel, post: post)
+                                            }
+                                        }
                                     }
                                     Spacer()
+                                    VStack {
+                                        Image(systemName: "bubble.left")
+                                            .font(.title2)
+                                            .foregroundStyle(.gray)
+                                        Text("\(post.comments.count)")
+                                            .foregroundStyle(.gray)
+                                    }
                                 }
+                                .foregroundStyle(Color.primary)
                                 .padding()
                                 .background {
                                     RoundedRectangle(cornerRadius: 25)
                                         .fill(.ultraThinMaterial)
                                 }
                                 .padding()
+                            }
                         }
                     }
+                }
+                .refreshable {
+                    await viewModel.reload()
                 }
                 .toolbar {
                     ToolbarItem(placement: .topBarLeading) {
@@ -57,11 +90,10 @@ struct SocialView: View {
                             Text("Dorothy Network")
                                 .font(.custom("PAPYRUS", size: 34))
                             Spacer()
-                            Image("me")
-                                .resizable()
-                                .frame(width: 80, height: 40)
+                                Image("me")
+                                    .resizable()
+                                    .frame(width: 80, height: 40)
                                 //.rotation3DEffect(.degrees(360), axis: (x: 0.0, y: 0.0, z: 1.0))
-
                         }
                     }
                     ToolbarItem(placement: .bottomBar) {
@@ -73,50 +105,23 @@ struct SocialView: View {
                     }
                 }
                 .sheet(isPresented: $showingPostAlert) {
-                    VStack {
-                        List {
-                            TextField("Username", text: $username)
-                                .padding()
-                            TextField("Type something...", text: $text)
-                                .padding()
-                        }
-                        HStack {
-                            Button("Cancel") {
-                                showingPostAlert.toggle()
-                            }
-                            .padding()
-                            Button("Post") {
-                                let newPost = Post(username: username, text: text)
-                                Task {
-                                    do {
-                                        try await CloudKitService.save(newPost)
-                                        posts.append(newPost)
-                                    } catch {
-                                        print(error.localizedDescription)
-                                    }
-                                }
-                                showingPostAlert.toggle()
-                            }
-                            .padding()
-                        }
-                    }
+                    PostCreationView(viewModel: viewModel, showingPostAlert: $showingPostAlert)
                 }
             }
             .toolbarBackground(.hidden, for: .bottomBar)
         }
-        .onAppear {
-            Task {
-                do {
-                    let posts = try await CloudKitService.fetch()
-                    self.posts = posts
-                } catch {
-                    print(error.localizedDescription)
-                }
+        .task {
+            await viewModel.reload()
+            mediaManager.playSound(for: .fnafambience)
+        }
+        .alert(errorTitle, isPresented: $didFail) {
+            Button("OK") {
+                dismiss()
             }
         }
     }
 }
 
 #Preview {
-    SocialView()
+    SocialView(mediaManager: MediaManager())
 }
