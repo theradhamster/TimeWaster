@@ -5,7 +5,7 @@
 //  Created by Dorothy Luetz on 11/16/23.
 //
 
-import Foundation
+import SwiftUI
 import CloudKit
 
 struct Comment: Identifiable {
@@ -16,6 +16,7 @@ struct Comment: Identifiable {
     var username: String
     var text: String
     var creationDate: Date
+    var media: UIImage?
     
     var record: CKRecord {
         let recordID = CKRecord.ID(recordName: id)
@@ -25,11 +26,12 @@ struct Comment: Identifiable {
         return record
     }
     
-    init(id: String = UUID().uuidString, username: String, text: String, creationDate: Date = Date()) {
+    init(id: String = UUID().uuidString, username: String, text: String, creationDate: Date = Date(), media: UIImage? = nil) {
         self.id = id
         self.username = username
         self.text = text
         self.creationDate = creationDate
+        self.media = media
     }
     
     init?(from record: CKRecord) {
@@ -39,5 +41,9 @@ struct Comment: Identifiable {
         }
         
         self = Comment(id: record.recordID.recordName, username: username, text: text, creationDate: record.creationDate ?? Date())
+        if let asset = record.value(forKey: "media") as? CKAsset {
+            let assetURL = asset.fileURL?.path ?? ""
+            self.media = UIImage(contentsOfFile: assetURL)
+        }
     }
 }

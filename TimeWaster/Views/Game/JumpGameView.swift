@@ -65,6 +65,7 @@ struct JumpGameView: View {
                     }
                     .buttonStyle(MaterialButtonStyle())
                     .padding(.bottom)
+                    .disabled(true)
                     HStack {
                         Button("Yes") {
                             game.doNewGame()

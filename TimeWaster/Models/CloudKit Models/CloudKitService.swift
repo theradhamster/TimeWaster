@@ -5,7 +5,7 @@
 //  Created by Dorothy Luetz on 11/10/23.
 //
 
-import Foundation
+import SDWebImageSwiftUI
 import CloudKit
 import SwiftUI
 
@@ -17,10 +17,10 @@ class CloudKitService {
         case couldNotFindImage, couldNotFetchData, couldNotCreateUrlFromAsset
     }
     
-    static func save(_ post: Post, media: UIImage? = nil) async throws {
+    static func save(_ post: Post) async throws {
         let record = post.record
-        if let media = media {
-            let data = media.pngData()
+        if let media = post.media {
+            let data = media.sd_imageData()
             let url = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent(NSUUID().uuidString+".dat")
             guard let url = url else {
                 print(SaveError.couldNotCreateUrlFromAsset)
@@ -28,8 +28,8 @@ class CloudKitService {
             }
             do {
                 try data?.write(to: url)
-            } catch let e as NSError {
-                print("Error! \(e)");
+            } catch {
+                print(error.localizedDescription)
                 return
             }
             record["media"] = CKAsset(fileURL: url)

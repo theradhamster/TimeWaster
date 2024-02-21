@@ -29,9 +29,9 @@ import CloudKit
         }
     }
     
-    func makeNewPost(username: String, text: String, media: UIImage?) async throws {
+    func makeNewPost(username: String, text: String, media: UIImage? = nil) async throws {
         let newPost = Post(username: username, text: text, media: media)
-                try await CloudKitService.save(newPost)
+        try await CloudKitService.save(newPost)
                 posts.append(newPost)
         }
 

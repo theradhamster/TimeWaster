@@ -4,6 +4,8 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>OldLondon.ttf</string>
+		<string>Jokerman.ttf</string>
 		<string>PAPYRUS.TTF</string>
 		<string>CHILLER.TTF</string>
 		<string>Minecraft.ttf</string>

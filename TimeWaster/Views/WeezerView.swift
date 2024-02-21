@@ -11,7 +11,6 @@ import AVKit
 
 struct WeezerView: View {
     @ObservedObject var mediaManager: MediaManager
-    @State private var showVideo = false
     
     var body: some View {
         ZStack {
@@ -19,19 +18,10 @@ struct WeezerView: View {
                 .resizable()
                 .ignoresSafeArea()
             VStack {
-                Button {
-                    showVideo.toggle()
-                } label: {
                     AnimatedImage(name: "brianchokesontoast.gif")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 200)
-                }
-                Spacer()
-                if showVideo {
-                    VideoPlayer(player: AVPlayer(url: Bundle.main.url(forResource: "weezeraolsessions", withExtension: "mp4")!))
-                        .frame(width: 400, height: 300)
-                }
                 Spacer()
                 List {
                     Section {

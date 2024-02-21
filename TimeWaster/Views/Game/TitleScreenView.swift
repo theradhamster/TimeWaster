@@ -12,15 +12,20 @@ struct TitleScreenView: View {
     @State var showingGame = false // ask yourself "is this related to how the view is presented (it should live in your view layer) or is it related to how the game functions (it should like in your viewmodel layer)
         // if the game showing is ALWAYS tied to some condition in your game. make it a computed property based on those parameters in your game
     @State var showingInstructions = false // ask yourself "is this related to how the view is presented (it should live in your view layer) or is it related to how the game functions (it should like in your viewmodel layer)
+    @State private var animationAmount = 0.0
     
     var body: some View {
         ZStack {
-            Button {
-                mediaManager.playSound(for: .uhohstinky)
-            } label: {
-                Image("uh oh stinky")
-                    .resizable()
-            }
+            Image("uh oh stinky")
+                .resizable()
+                .rotationEffect(.degrees(animationAmount))
+                .rotation3DEffect(.degrees(animationAmount), axis: (x: 0.7, y: 2.0, z: 0.5))
+                .onAppear {
+                    withAnimation(.linear(duration: 0.1)
+                        .speed(0.02).repeatForever(autoreverses: false)) {
+                            animationAmount = 360.0
+                        }
+                }
             VStack {
                 Spacer()
                 Button {
@@ -40,6 +45,14 @@ struct TitleScreenView: View {
                 }
                 .font(.title3)
                 .buttonStyle(MaterialButtonStyle())
+                .padding()
+                NavigationLink {
+                    GameMenuView(mediaManager: mediaManager)
+                } label: {
+                    Text("Menu")
+                }
+                .font(.title3)
+                .buttonStyle(MaterialButtonStyle())
                 Spacer()
                     .sheet(isPresented: $showingInstructions) {
                         Text("Swipe left and right to bounce from platform to platform.\n\nIf the game opens and there are no platforms, reopen the game.")
@@ -50,6 +63,7 @@ struct TitleScreenView: View {
                 JumpGameView(game: JumpGame(), showing: $showingGame)
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

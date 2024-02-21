@@ -14,9 +14,9 @@ struct ContentView: View {
                 .tabItem {
                     Label("Fun", systemImage: "face.smiling.inverse")
                 }
-            TitleScreenView(mediaManager: MediaManager())
+            GameMenuView(mediaManager: MediaManager())
                 .tabItem {
-                    Label("Bounce Game", systemImage: "brain.head.profile")
+                    Label("Games", systemImage: "brain.head.profile")
                 }
             SocialView(mediaManager: MediaManager())
                 .tabItem {
