@@ -39,6 +39,11 @@ struct PostDetailView: View {
                                 .font(.custom("PAPYRUS", size: 28))
                                 .foregroundStyle(.primary)
                                 .multilineTextAlignment(.leading)
+                            if let media = post.media {
+                                Image(uiImage: media)
+                                    .resizable()
+                                    .scaledToFit()
+                            }
                             ScrollView(.horizontal) {
                                 HStack {
                                     ReactionView(viewModel: viewModel, post: post)
@@ -57,30 +62,7 @@ struct PostDetailView: View {
                     Divider()
                     ScrollView {
                         ForEach(post.comments) { comment in
-                            HStack {
-                                VStack(alignment: .leading) {
-                                    HStack {
-                                        Text(comment.username)
-                                            .font(.custom("CHILLER", size: 22))
-                                            .foregroundStyle(.gray)
-                                        Text(comment.creationDate.formatted())
-                                            .font(.custom("Minecraft", size: 22))
-                                            .foregroundStyle(.gray)
-                                    }
-                                    Text(comment.text)
-                                        .font(.custom("CHILLER", size: 28))
-                                        .foregroundStyle(.black)
-                                        .multilineTextAlignment(.leading)
-                                }
-                                Spacer()
-                            }
-                            .foregroundStyle(Color.primary)
-                            .padding()
-                            .background {
-                                RoundedRectangle(cornerRadius: 10)
-                                    .fill(.white)
-                            }
-                            .padding()
+                            CommentView(viewModel: viewModel, post: post, comment: comment)
                         }
                     }
                     .refreshable {
